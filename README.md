@@ -1,34 +1,29 @@
-# Fiza Eman — Portfolio
+# Fiza Eman — Developer Portfolio
 
-Personal developer portfolio built with Next.js (App Router), TypeScript, and Tailwind CSS.
+My personal developer portfolio showcasing my skills, experience, and
+full-stack web development projects.
 
-## Sections
+## Live Portfolio
 
-Navbar · Hero · About · Skills · Featured Projects · What I Build · Education · Contact · Footer
+https://fiza-eman-portfolio.vercel.app/
 
-## Run locally
+## Built With
 
-```bash
-npm install
-npm run dev
-```
+- Next.js
+- TypeScript
+- React
+- Tailwind CSS
 
-Open http://localhost:3000.
+## Featured Projects
 
-## Deploy on Vercel
+- MERN Multi-Vendor E-commerce Platform
+- Lahori Lason — Restaurant POS System
+- FizaEstate — Real Estate Platform
+- BizBoard — Business Dashboard
 
-1. Push this project to a GitHub repository.
-2. Go to https://vercel.com/new and import the repository.
-3. Framework preset: Next.js (auto-detected). No environment variables needed.
-4. Click **Deploy**.
+## Author
 
-## Editing content
+Fiza Eman
 
-- Project details live in `components/Projects.tsx`.
-- Skills groups live in `components/Skills.tsx`.
-- Bio text lives in `components/About.tsx`.
-- Contact email and social links live in `components/Contact.tsx` and `components/Footer.tsx`.
-
-## Tech stack
-
-Next.js 14 · React 18 · TypeScript · Tailwind CSS
+GitHub: https://github.com/fizae47-arch
+LinkedIn: https://www.linkedin.com/in/fiza-eman-90323a311
