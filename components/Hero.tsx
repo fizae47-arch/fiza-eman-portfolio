@@ -3,7 +3,7 @@ export default function Hero() {
     <section id="top" className="relative overflow-hidden pt-32 pb-24 sm:pt-40 sm:pb-32">
       <div className="section-shell grid grid-cols-1 items-center gap-14 lg:grid-cols-[1.1fr_0.9fr]">
         <div>
-          <p className="font-mono text-sm text-teal">Hafizabad, Punjab, Pakistan</p>
+          <p className="font-mono text-sm text-teal">Gujranwala, Punjab, Pakistan</p>
 
           <h1 className="mt-5 font-display text-5xl font-semibold leading-[1.05] text-paper sm:text-6xl">
             Fiza Eman
@@ -25,6 +25,14 @@ export default function Hero() {
               className="rounded-md bg-indigo px-6 py-3 font-body text-sm font-medium text-ink transition-colors hover:bg-indigo-dim"
             >
               View projects
+            </a>
+            <a
+              href="/resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="rounded-md border border-ink-border px-6 py-3 font-body text-sm font-medium text-paper transition-colors hover:border-paper-faint"
+            >
+              View resume
             </a>
             <a
               href="https://github.com/fizae47-arch"

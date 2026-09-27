@@ -2,6 +2,7 @@ type Project = {
   name: string;
   tag: string;
   live: string;
+  github?: string;
   description: string;
   highlights: string[];
   tech: string[];
@@ -13,6 +14,7 @@ const projects: Project[] = [
     name: "MERN Multi-Vendor E-commerce Platform",
     tag: "E-commerce",
     live: "https://e-commerce-shop-232n.vercel.app/",
+    github: "https://github.com/fizae47-arch/e-commerce-shop",
     description:
       "A full-stack marketplace with separate customer and shop-side experiences — product search, categories, cart, wishlist, checkout, orders, reviews, refunds, and address management.",
     highlights: [
@@ -28,6 +30,7 @@ const projects: Project[] = [
     name: "Lahori Lason — Restaurant POS System",
     tag: "In production use",
     live: "https://lahori-lason-fast-food-397m.vercel.app/",
+    github: "https://github.com/fizae47-arch/lahori-lason-fast-food",
     description:
       "A restaurant point-of-sale system built and deployed for real daily order and sales operations — not a demo. Staff use it to take orders and track earnings.",
     highlights: [
@@ -43,6 +46,7 @@ const projects: Project[] = [
     name: "FizaEstate — Real Estate Platform",
     tag: "Real estate",
     live: "https://mern-estate-theta-woad.vercel.app/",
+    github: "https://github.com/fizae47-arch/mern-estate",
     description:
       "A property marketplace with listing management, search and filtering, favorites, and direct messaging between users, backed by Google OAuth and Supabase storage.",
     highlights: [
@@ -58,6 +62,7 @@ const projects: Project[] = [
     name: "BizBoard — Business Dashboard",
     tag: "Next.js · Learning project",
     live: "https://bizboard-gilt.vercel.app/",
+    github: "https://github.com/fizae47-arch/bizboard",
     description:
       "A Next.js + TypeScript business dashboard covering metrics, products, orders, customers, and analytics — built to go deep on the App Router.",
     highlights: [
@@ -130,14 +135,26 @@ export default function Projects() {
                   ))}
                 </div>
 
-                <a
-                  href={project.live}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="mt-6 inline-flex items-center gap-2 font-body text-sm font-medium text-indigo hover:text-paper"
-                >
-                  View live demo
-                </a>
+                <div className="mt-6 flex flex-wrap items-center gap-x-6 gap-y-2">
+                  <a
+                    href={project.live}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 font-body text-sm font-medium text-indigo hover:text-paper"
+                  >
+                    View live demo
+                  </a>
+                  {project.github && (
+                    <a
+                      href={project.github}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 font-body text-sm font-medium text-paper-muted hover:text-paper"
+                    >
+                      GitHub
+                    </a>
+                  )}
+                </div>
               </div>
 
               <div className={i % 2 === 1 ? "lg:order-1" : ""}>
