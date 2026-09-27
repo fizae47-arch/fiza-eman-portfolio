@@ -3,14 +3,14 @@ export default function Hero() {
     <section id="top" className="relative overflow-hidden pt-32 pb-24 sm:pt-40 sm:pb-32">
       <div className="section-shell grid grid-cols-1 items-center gap-14 lg:grid-cols-[1.1fr_0.9fr]">
         <div>
-          <p className="font-mono text-sm text-teal">Gujranwala, Punjab, Pakistan</p>
+          <p className="font-mono text-sm text-teal">Hafizabad, Punjab, Pakistan</p>
 
           <h1 className="mt-5 font-display text-5xl font-semibold leading-[1.05] text-paper sm:text-6xl">
             Fiza Eman
           </h1>
 
           <p className="mt-4 max-w-md font-display text-2xl font-medium leading-snug text-paper-muted sm:text-3xl">
-            Full-Stack Web Developer
+            Full-Stack Software Engineer
           </p>
 
           <p className="mt-5 max-w-lg font-body text-base leading-relaxed text-paper-muted">
