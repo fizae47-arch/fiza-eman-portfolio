@@ -1,32 +1,18 @@
 import type { Metadata } from "next";
-import { Space_Grotesk, Inter, JetBrains_Mono } from "next/font/google";
+import "@fontsource/space-grotesk/latin-500.css";
+import "@fontsource/space-grotesk/latin-600.css";
+import "@fontsource/space-grotesk/latin-700.css";
+import "@fontsource/inter/latin-400.css";
+import "@fontsource/inter/latin-500.css";
+import "@fontsource/inter/latin-600.css";
+import "@fontsource/jetbrains-mono/latin-400.css";
+import "@fontsource/jetbrains-mono/latin-500.css";
 import "./globals.css";
 
-const spaceGrotesk = Space_Grotesk({
-  subsets: ["latin"],
-  weight: ["500", "600", "700"],
-  variable: "--font-space-grotesk",
-  display: "swap",
-});
-
-const inter = Inter({
-  subsets: ["latin"],
-  weight: ["400", "500", "600"],
-  variable: "--font-inter",
-  display: "swap",
-});
-
-const jetbrainsMono = JetBrains_Mono({
-  subsets: ["latin"],
-  weight: ["400", "500"],
-  variable: "--font-jetbrains-mono",
-  display: "swap",
-});
-
 export const metadata: Metadata = {
-  title: "Fiza Eman — Full-Stack Web Developer",
+  title: "Fiza Eman — Full-Stack Software Engineer",
   description:
-    "Full-stack web developer building production MERN and Next.js applications — e-commerce platforms, POS systems, real estate marketplaces, and business dashboards.",
+    "Full-stack software engineer building production MERN and Next.js applications — e-commerce platforms, POS systems, real estate marketplaces, and business dashboards.",
 };
 
 export default function RootLayout({
@@ -36,11 +22,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body
-        className={`${spaceGrotesk.variable} ${inter.variable} ${jetbrainsMono.variable} font-body antialiased`}
-      >
-        {children}
-      </body>
+      <body className="font-body antialiased">{children}</body>
     </html>
   );
 }
