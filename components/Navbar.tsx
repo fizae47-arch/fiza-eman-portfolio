@@ -1,12 +1,14 @@
 "use client";
 
+import Link from "next/link";
 import { useEffect, useState } from "react";
 
 const links = [
-  { href: "#about", label: "About" },
-  { href: "#skills", label: "Skills" },
-  { href: "#projects", label: "Projects" },
-  { href: "#contact", label: "Contact" },
+  { href: "/#about", label: "About" },
+  { href: "/#skills", label: "Skills" },
+  { href: "/#projects", label: "Projects" },
+  { href: "/blog", label: "Writing" },
+  { href: "/#contact", label: "Contact" },
 ];
 
 export default function Navbar() {
@@ -23,26 +25,26 @@ export default function Navbar() {
   return (
     <header
       className={`fixed top-0 z-50 w-full transition-colors duration-300 ${
-        scrolled ? "bg-ink/90 backdrop-blur border-b border-ink-border" : "bg-transparent"
+        scrolled || open ? "bg-ink/90 backdrop-blur border-b border-ink-border" : "bg-transparent"
       }`}
     >
       <nav className="section-shell flex h-16 items-center justify-between">
-        <a
-          href="#top"
+        <Link
+          href="/"
           className="font-display text-lg font-semibold tracking-tight text-paper"
         >
           Fiza Eman
-        </a>
+        </Link>
 
         <ul className="hidden items-center gap-8 md:flex">
           {links.map((link) => (
             <li key={link.href}>
-              <a
+              <Link
                 href={link.href}
                 className="font-body text-sm text-paper-muted transition-colors hover:text-paper"
               >
                 {link.label}
-              </a>
+              </Link>
             </li>
           ))}
         </ul>
@@ -53,13 +55,9 @@ export default function Navbar() {
           aria-expanded={open}
           onClick={() => setOpen((v) => !v)}
         >
-          <span
-            className={`h-px w-6 bg-paper transition-transform ${open ? "translate-y-1.5 rotate-45" : ""}`}
-          />
+          <span className={`h-px w-6 bg-paper transition-transform ${open ? "translate-y-1.5 rotate-45" : ""}`} />
           <span className={`h-px w-6 bg-paper transition-opacity ${open ? "opacity-0" : ""}`} />
-          <span
-            className={`h-px w-6 bg-paper transition-transform ${open ? "-translate-y-1.5 -rotate-45" : ""}`}
-          />
+          <span className={`h-px w-6 bg-paper transition-transform ${open ? "-translate-y-1.5 -rotate-45" : ""}`} />
         </button>
       </nav>
 
@@ -67,13 +65,13 @@ export default function Navbar() {
         <ul className="flex flex-col gap-1 border-t border-ink-border bg-ink px-6 pb-6 pt-2 md:hidden">
           {links.map((link) => (
             <li key={link.href}>
-              <a
+              <Link
                 href={link.href}
                 onClick={() => setOpen(false)}
                 className="block py-3 font-body text-base text-paper-muted hover:text-paper"
               >
                 {link.label}
-              </a>
+              </Link>
             </li>
           ))}
         </ul>
