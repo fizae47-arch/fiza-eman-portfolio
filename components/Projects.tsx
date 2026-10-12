@@ -54,7 +54,7 @@ export default async function Projects() {
                     rel="noopener noreferrer"
                     className="inline-flex items-center gap-2 font-body text-sm font-medium text-indigo hover:text-paper"
                   >
-                    View live demo
+                    {project.live.replace(/^https?:\/\//, "").replace(/\/$/, "")} ↗
                   </a>
                   )}
                   {project.github && (
