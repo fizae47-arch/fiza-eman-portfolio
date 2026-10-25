@@ -5,8 +5,8 @@ import { useEffect, useState } from "react";
 
 const links = [
   { href: "/#about", label: "About" },
-  { href: "/#skills", label: "Skills" },
   { href: "/#projects", label: "Projects" },
+  { href: "/#skills", label: "Skills" },
   { href: "/blog", label: "Writing" },
   { href: "/#contact", label: "Contact" },
 ];
@@ -41,7 +41,7 @@ export default function Navbar() {
             <li key={link.href}>
               <Link
                 href={link.href}
-                className="font-body text-sm text-paper-muted transition-colors hover:text-paper"
+                className="nav-link font-body text-sm text-paper-muted transition-colors hover:text-paper"
               >
                 {link.label}
               </Link>

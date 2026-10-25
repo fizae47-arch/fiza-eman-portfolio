@@ -8,6 +8,7 @@ import "@fontsource/inter/latin-600.css";
 import "@fontsource/jetbrains-mono/latin-400.css";
 import "@fontsource/jetbrains-mono/latin-500.css";
 import "./globals.css";
+import ScrollProgress from "@/components/ScrollProgress";
 
 export const metadata: Metadata = {
   title: "Fiza Eman — Full-Stack Software Engineer",
@@ -22,7 +23,13 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="font-body antialiased">{children}</body>
+      <body className="font-body antialiased">
+        <noscript>
+          <style>{".reveal,.rise,.term-line,.char{opacity:1!important;transform:none!important}"}</style>
+        </noscript>
+        <ScrollProgress />
+        {children}
+      </body>
     </html>
   );
 }

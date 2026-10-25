@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { formatDate, getArticles, readingTime } from "@/lib/data";
+import Reveal from "@/components/Reveal";
 
 export default async function Writing() {
   const articles = await getArticles(3);
@@ -7,9 +8,9 @@ export default async function Writing() {
 
   return (
     <section id="writing" className="border-t border-ink-border py-24">
-      <div className="section-shell">
+      <Reveal className="section-shell">
         <div className="flex items-end justify-between gap-6">
-          <h2 className="font-display text-3xl font-semibold text-paper">Writing</h2>
+          <h2 className="font-display text-3xl font-semibold text-paper">Writing<span className="title-bar" /></h2>
           <Link
             href="/blog"
             className="font-body text-sm font-medium text-indigo transition-colors hover:text-paper"
@@ -36,7 +37,7 @@ export default async function Writing() {
             </Link>
           ))}
         </div>
-      </div>
+      </Reveal>
     </section>
   );
 }

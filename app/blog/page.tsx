@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import Ambient from "@/components/Ambient";
 import { formatDate, getArticles } from "@/lib/data";
 
 export const dynamic = "force-dynamic";
@@ -15,7 +16,8 @@ export default async function BlogPage() {
   const articles = await getArticles();
 
   return (
-    <main className="min-h-screen bg-ink">
+    <main className="min-h-screen">
+      <Ambient />
       <Navbar />
       <section className="pb-24 pt-32 sm:pt-40">
         <div className="section-shell">

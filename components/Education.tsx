@@ -1,4 +1,5 @@
 import { getEducation } from "@/lib/data";
+import Reveal from "@/components/Reveal";
 
 export default async function Education() {
   const items = await getEducation();
@@ -7,9 +8,9 @@ export default async function Education() {
 
   return (
     <section id="education" className="border-t border-ink-border py-24">
-      <div className="section-shell grid grid-cols-1 gap-12 lg:grid-cols-2">
+      <Reveal className="section-shell grid grid-cols-1 gap-12 lg:grid-cols-2">
         <div>
-          <h2 className="font-display text-3xl font-semibold text-paper">Education</h2>
+          <h2 className="font-display text-3xl font-semibold text-paper">Education<span className="title-bar" /></h2>
           <div className="mt-8 space-y-6">
             {education.map((item) => (
               <div key={item.id} className="border-l-2 border-ink-border pl-5">
@@ -24,7 +25,7 @@ export default async function Education() {
 
         {certifications.length > 0 && (
           <div>
-            <h2 className="font-display text-3xl font-semibold text-paper">Certifications</h2>
+            <h2 className="font-display text-3xl font-semibold text-paper">Certifications<span className="title-bar" /></h2>
             <ul className="mt-8 space-y-4">
               {certifications.map((c) => (
                 <li
@@ -38,7 +39,7 @@ export default async function Education() {
             </ul>
           </div>
         )}
-      </div>
+      </Reveal>
     </section>
   );
 }

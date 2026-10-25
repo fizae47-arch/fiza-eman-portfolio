@@ -3,6 +3,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import Ambient from "@/components/Ambient";
 import Markdown from "@/components/Markdown";
 import { formatDate, getArticle, readingTime } from "@/lib/data";
 
@@ -26,7 +27,8 @@ export default async function ArticlePage({ params }: Props) {
   if (!article) notFound();
 
   return (
-    <main className="min-h-screen bg-ink">
+    <main className="min-h-screen">
+      <Ambient />
       <Navbar />
       <article className="pb-24 pt-32 sm:pt-40">
         <div className="section-shell">

@@ -1,3 +1,4 @@
+import Reveal from "@/components/Reveal";
 const socials = [
   { label: "GitHub", href: "https://github.com/fizae47-arch" },
   { label: "LinkedIn", href: "https://www.linkedin.com/in/fiza-eman-90323a311" },
@@ -7,9 +8,9 @@ const socials = [
 export default function Contact() {
   return (
     <section id="contact" className="border-t border-ink-border py-28">
-      <div className="section-shell">
-        <h2 className="font-display text-3xl font-semibold text-paper">
-          Let&apos;s build something.
+      <Reveal className="section-shell">
+        <h2 className="font-display text-shimmer text-3xl font-semibold">
+          Let&apos;s build something.<span className="title-bar" />
         </h2>
         <p className="mt-4 max-w-md font-body text-sm leading-relaxed text-paper-muted">
           Open to full-stack roles and freelance projects. The fastest way to
@@ -36,7 +37,7 @@ export default function Contact() {
             </a>
           ))}
         </div>
-      </div>
+      </Reveal>
     </section>
   );
 }
